@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import { Heart, Sparkles } from "lucide-react";
 import Confetti from "react-confetti";
+import { Button } from "./ui/button";
 
 const SuccessScreen = () => {
   return (
@@ -55,28 +56,33 @@ const SuccessScreen = () => {
           animate={{ y: 0, opacity: 1 }}
           transition={{ delay: 0.4 }}
         >
-          Yay! 💕
+          Your Valentine's Gift is on its way!💕
         </motion.h1>
 
-        <motion.p
-          className="text-2xl text-gray-800 font-medium"
+        {/* <motion.p
+          className="text-2xl text-red-600 font-medium"
           initial={{ y: 20, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
           transition={{ delay: 0.6 }}
         >
-          I knew you'd say yes!
-        </motion.p>
+          The countdown to your special surprise has begun...
+        </motion.p> */}
 
         <motion.div
-          className="flex items-center justify-center gap-2 text-gray-700"
+          className="flex items-center justify-center text-gray-700"
           initial={{ y: 20, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
           transition={{ delay: 0.8 }}
         >
-          <Sparkles size={20} />
-          <span className="text-lg">Happy Valentine's Day!</span>
-          <Sparkles size={20} />
+          <Sparkles size={20} className="text-red-600" />
+          <span className="text-lg max-w-[400px] text-red-600">
+            Here’s to making your day special and cherishing the moments we
+            share together!
+          </span>
+          <Sparkles size={20} className="text-red-600" />
         </motion.div>
+
+        <Button onClick={() => window.location.reload()}>Go Back</Button>
       </motion.div>
     </motion.div>
   );

@@ -42,28 +42,50 @@ const ValentineCard = () => {
             animate={{ y: 0, opacity: 1 }}
             transition={{ delay: 0.3 }}
           >
-            <motion.h1
-              className="text-4xl sm:text-5xl md:text-6xl font-bold text-gray-900 drop-shadow-lg"
-              animate={{
-                scale: [1, 1.05, 1],
-              }}
-              transition={{
-                duration: 2,
-                repeat: Infinity,
-                ease: "easeInOut",
-              }}
-            >
-              Will you be my Valentine?
-            </motion.h1>
-
-            <motion.p
-              className="text-lg sm:text-xl text-gray-800 font-medium"
+            <motion.div
+              className="space-y-8"
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
-              transition={{ delay: 0.5 }}
+              transition={{ delay: 0.3 }}
             >
-              I promise to bring you joy and happiness! 💝
-            </motion.p>
+              <motion.h1
+                className="text-5xl sm:text-6xl md:text-7xl font-bold text-gray-900 drop-shadow-lg"
+                initial={{ opacity: 0, y: -10 }}
+                animate={{ opacity: 1, y: 0, scale: [1, 1.02, 1] }}
+                transition={{
+                  opacity: { delay: 0.4 },
+                  y: { delay: 0.4 },
+                  scale: { duration: 2, repeat: Infinity, ease: "easeInOut" }
+                }}
+              >
+                Dear Osho Eniola Peace,
+              </motion.h1>
+
+              <motion.p
+                className="text-lg sm:text-xl text-gray-800 font-medium leading-relaxed"
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{ delay: 0.6 }}
+              >
+                ...delicate as lace, elegant as a fine home,
+                <br />
+                tough as polished steel and
+                <br />
+                <span className="text-red-600 font-bold">
+                  LOVE OF ALL MY LIVES
+                </span>
+              </motion.p>
+
+              <motion.h2
+                className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900"
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{ delay: 0.8 }}
+              >
+                Will you be my Valentine?{" "}
+                <span className="text-red-600">♥</span>
+              </motion.h2>
+            </motion.div>
           </motion.div>
 
           {/* Buttons Container */}
