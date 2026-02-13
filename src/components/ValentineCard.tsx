@@ -55,10 +55,14 @@ const ValentineCard = () => {
                 transition={{
                   opacity: { delay: 0.4 },
                   y: { delay: 0.4 },
-                  scale: { duration: 2, repeat: Infinity, ease: "easeInOut" }
+                  scale: {
+                    duration: 2,
+                    repeat: Infinity,
+                    ease: "easeInOut",
+                  },
                 }}
               >
-                Dear Osho Eniola Peace,
+                Dear Ajewole Oluwapelumi,
               </motion.h1>
 
               <motion.p
@@ -67,13 +71,13 @@ const ValentineCard = () => {
                 animate={{ opacity: 1 }}
                 transition={{ delay: 0.6 }}
               >
-                ...delicate as lace, elegant as a fine home,
+                graceful in your own way,
                 <br />
-                tough as polished steel and
+                soft-spoken but unforgettable,
                 <br />
-                <span className="text-red-600 font-bold">
-                  LOVE OF ALL MY LIVES
-                </span>
+                the kind of presence that quietly
+                <br />
+                changes the atmosphere.
               </motion.p>
 
               <motion.h2
@@ -107,7 +111,8 @@ const ValentineCard = () => {
               animate={{ opacity: 1, y: 0 }}
             >
               {noClickCount === 2 && "The Yes button is growing... 👀"}
-              {noClickCount === 3 && "It's getting bigger! Maybe that's a sign? 💭"}
+              {noClickCount === 3 &&
+                "It's getting bigger! Maybe that's a sign? 💭"}
               {noClickCount >= 4 && "Try to click No again... I dare you! 😏"}
             </motion.p>
           )}
